@@ -1,4 +1,5 @@
-import { Container, Text, VStack, Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Container, Text, VStack, Box, Heading, SimpleGrid, Button } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
@@ -51,6 +52,9 @@ const Index = () => {
             <Line data={data} options={options} />
           </Box>
         </SimpleGrid>
+        <Link to="/board">
+          <Button colorScheme="teal" size="lg">Go to Follow-Up Board</Button>
+        </Link>
       </VStack>
     </Container>
   );
